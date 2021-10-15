@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"
+    integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+    body {
+      overflow: hidden;
+    }
+
+    .score_div {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      user-select: none;
+      z-index: 100;
+    }
+    .score_div span {
+      color: #fff;
+      font-size: large;
+    }
+    #main_alert {
+      height: 100vh;
+      width: 100vw;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 101;
+      border-radius: 10rem;
+      user-select: none;
+    }
+
+    .alert_div {
+      width: 20rem;
+      height: 10rem;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-direction: column;
+      z-index: 101;
+    }
+    .point_div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    #final_point {
+      font-size: 2.5rem;
+      margin-bottom: -8px;
+    }
+
+    #startBtn {
+      margin-top: -0.5rem;
+      width: 15em;
+      height: 2.5rem;
+      border-radius: 1rem;
+      background-color: blue;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+    }
+
+    #canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+  </style>
+  <body>
+    <div class="score_div"> <span>jaydip Sidapara's </span><span>Score: </span><span id="score">0</span></div>
+
+    <div id="main_alert">
+      <div class="alert_div">
+        <div class="point_div">
+          <span id="final_point">0</span>
+          <span>jaydip's Points</span>
+        </div>
+        <button type="button" id="startBtn">Start Game</button>
+      </div>
+    </div>
+
+    <canvas id="canvas"></canvas>
+  </body>
+</html>
+<script src="./strikeBall.js">5555</script>
